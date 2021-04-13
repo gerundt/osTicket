@@ -32,7 +32,7 @@ if ($_GET['auth']
 }
 // Try autologin the user
 // Authenticated user can be of type ticket owner or collaborator
-elseif (isset($_GET['auth']) || isset($_GET['t'])) {
+elseif (isset($_GET['auth']) || isset($_GET['t']) || isset($_GET['id'])) {
     // TODO: Consider receiving an AccessDenied object
     $user =  UserAuthenticationBackend::processSignOn($errors, false);
 }
